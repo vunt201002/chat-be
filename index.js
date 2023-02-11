@@ -11,7 +11,7 @@ const app = express();
 dotenv.config();
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://chat-f2cg.onrender.com"]
+    origin: ["https://chat-f2cg.onrender.com"]
 }));
 app.use(function (req, res, next) {
 
@@ -50,7 +50,7 @@ const server = app.listen(process.env.PORT, () => {
 
 const io = socket(server, {
     cors: {
-        origin: ["http://localhost:3000, https://chat-f2cg.onrender.com"],
+        origin: ["https://chat-f2cg.onrender.com"],
         credentials: true
     }
 });
